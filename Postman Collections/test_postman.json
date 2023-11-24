@@ -12,7 +12,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"type": "text/javascript",
+						"id": "3379a151-3d30-41dc-8de5-a79a1b55a01f",
 						"exec": [
 							"pm.test(\"An access token is returned\", () => {",
 							"    pm.expect(pm.response.json()).to.have.property('token')",
@@ -21,12 +21,17 @@
 							"    // This lets us use it in other requests",
 							"    pm.collectionVariables.set('token', pm.response.json().token)",
 							"})",
+							"",
 							""
-						]
+						],
+						"type": "text/javascript"
 					}
 				}
 			],
 			"id": "84ca99d7-66e6-4c8f-8987-a60151e42b58",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -142,10 +147,12 @@
 	],
 	"variable": [
 		{
+			"id": "98e628dd-abdb-4fe4-9056-d127b38d6269",
 			"key": "token",
 			"value": ""
 		},
 		{
+			"id": "4cc16033-884c-47cc-8cd5-aa8c1fe741b4",
 			"key": "baseUrl",
 			"value": "https://postman-integration-testing.glitch.me/"
 		}
